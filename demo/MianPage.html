@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>rotateHtml</title>
+</head>
+<style>
+	*{padding: 0;margin: 0;}
+	body{background: #333333;}
+	.container{position: absolute;width: 100%;height: 100%;}
+	.side{width: 10px;background: #999999;float: left;height: 100%;transition:width 0.7s;-webkit-transition:width 0.7s;-moz-transition:width 0.7s;position: absolute;overflow: hidden;z-index: 1000;}
+	.side-cont{position: absolute;width: 250px;height: 100%;}
+
+	.main{margin-left: 10px;height: 100%;perspective:1000;-webkit-perspective:1000;transition:margin-left 0.7s;-webkit-transition:margin-left 0.7s;-moz-transition:margin-left 0.7s;z-index: 100}
+	.main-cont{position:absolute;left:0;top:0;background: #666666;height: 100%;width: 100%;transform-origin:left;transition:transform 0.7s;-webkit-transition:transform 0.7s;-moz-transition:transform 0.7s;z-index:10;}
+	
+
+	
+	
+	.side:hover{width: 250px;}
+	.side:hover +.main{margin-left: 250px}
+	.side:hover +.main>.main-cont{transform:rotateY(10deg);}
+
+
+
+</style>
+<body>
+	<div class="container">
+		<div class="side">
+			<div class="side-cont">
+	
+			</div>
+		</div>
+		<div class="main" id="main">
+			<div class="main-cont" id="tab1" style="background:#ffffff;">
+			</div>
+			<div class="main-cont" id="tab2" style="background:#ffffff;">
+			</div>
+			<div class="main-cont" id="tab3" style="background:#ffffff;">
+			</div>
+			<div class="main-cont" id="tab4" style="background:#ffffff;">
+			</div>
+		</div>
+	</div>
+</body>
+</html>
